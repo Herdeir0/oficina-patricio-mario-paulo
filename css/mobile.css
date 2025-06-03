@@ -128,7 +128,7 @@
     /* --------------------------------------------------------------Hero------- */
 
     hero-container {
-        height: 100vh;
+        height: calc(100vh - 88px);
         padding: 0px var(--s);
         display: flex;
     }
