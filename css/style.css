@@ -12,10 +12,8 @@
 */
 
 :root {
-    --azul: rgb(0, 86, 224);
-    --vermelho: #e94e77;
-    --verde: #50e3c2;
-    --amarelo: #FFAE00;
+    --cinza: rgb(118, 133, 146);
+    --amarelo: #efd232;
     --text-color: #181818;
     --background-color: #fff;
     --font-family: 'Alexandria', sans-serif;
@@ -220,7 +218,7 @@ hero-container {
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(rgba(0, 57, 148, 0.7), rgba(0, 57, 148, 0.9)), url(../imgs/oficina.png) no-repeat center center;
+    background: linear-gradient(rgba(39, 46, 57, 0.9), rgba(39, 46, 57, 0.9)), url(../imgs/oficina.png) no-repeat center center;
     background-size: cover;
 
     box-sizing: border-box;
@@ -295,7 +293,7 @@ notification-container {
     justify-content: center;
     align-items: center;
 
-    background: var(--amarelo);
+    background: var(--cinza);
 
     box-sizing: border-box;
 }
@@ -384,14 +382,79 @@ text-content {
     flex-direction: column;
     row-gap: var(--l);
 
-    grid-column-start: 4;
-    grid-column-end: 10;
+    grid-column: span 6;
     
 }
 
 /* --------------------------------------------------------------Text-with-images------- */
 
+text-with-image-container {
+    position: relative;
 
+    width: 100%;
+    height: auto;
+
+    padding: 0px var(--xxl);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--background-color);
+
+    box-sizing: border-box;
+}
+
+text-with-image-wrapper {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    max-width: 1440px;
+
+    padding: var(--3xl) 0;
+
+    display: grid;
+    justify-content: center;
+
+    flex-direction: row;
+    
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--m);
+}
+
+image-content {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: var(--l);
+
+    grid-column: span 6;
+    
+}
+
+ul {
+    position: relative;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: var(--text);
+    font-weight: 300;
+    line-height: 140%;
+
+    color: var(--text-color);
+
+    list-style: inside;
+}
 
 /* --------------------------------------------------------------Banner------- */
 
@@ -407,7 +470,7 @@ banner-container {
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(rgba(153, 0, 0, 0.8), rgba(153, 0, 0, 0.8)), url(../imgs/volkswagen.jpg) no-repeat center center;
+    background: linear-gradient(rgba(40, 53, 82, 0.9), rgba(40, 53, 82, 0.9)), url(../imgs/volkswagen.jpg) no-repeat center center;
     background-size: cover;
 
     box-sizing: border-box;
@@ -443,8 +506,10 @@ banner-content {
     flex-direction: column;
     row-gap: var(--l);
 
-    grid-column-start: 4;
-    grid-column-end: 10;
+    grid-column: span 6;
+
+    /* grid-column-start: 4;
+    grid-column-end: 10; */
 
     color: var(--background-color);
     
@@ -507,8 +572,7 @@ testimonial-content {
     flex-direction: column;
     row-gap: var(--l);
 
-    grid-column-start: 4;
-    grid-column-end: 10;
+    grid-column: span 6;
 }
 
 testimonial-box-wrapper {
@@ -690,3 +754,4 @@ footer-element-3 d {
 
     color: var(--background-color) !important;
 }
+
